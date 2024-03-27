@@ -7,4 +7,4 @@ set -ue
 # realpath's `-m` is required, since the path might not exist.
 ENV_DIR=$(realpath -m "environments/$ARGOCD_ENV_TK_ENV")
 
-tk show "$ENV_DIR" --dangerous-allow-redirect ${ARGOCD_ENV_EXTRA_ARGS}
+tk show "$ENV_DIR" --dangerous-allow-redirect ${ARGOCD_ENV_EXTRA_ARGS:-}
