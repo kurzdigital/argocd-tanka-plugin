@@ -19,4 +19,7 @@ spec:
 
     discover:
         find:
-            command: ["bash", "-c", "/script-wrapper /discover"]
+            command:
+                - "bash"
+                - "-c"
+                - "find . -name jsonnetfile.json"
